@@ -1,0 +1,5 @@
+1) Secure secret key comparison.
+2) Abstract out google app key.
+3) Validate appropriate responses if missing parameters or template variables and template name.
+4) Swagger documentation.
+5) Authorization header should be bearer token.
