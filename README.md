@@ -12,7 +12,7 @@ Great for sending password reset emails to users, account validation emails, or 
 
 ## Here's an example!
 
-### First, start the server like so:
+### Step One: Start the server like so:
 
 ```js
 // index.js
