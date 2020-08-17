@@ -37,7 +37,7 @@ emailService.runEmailApi({
 
 ### Step Two: Set up a folder to store the templates.
 
-For this example, let's set up a "congrats" template. To congratulate our recipient for a recent purchase.
+For this example, let's set up a "congrats" template to congratulate our recipient for a recent purchase.
 
 ```sh
 .
