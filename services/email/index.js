@@ -5,13 +5,7 @@ const { sendMailWithTemplate } = require('./sendMailWithTemplate')
 
 function setUpEmailService(config) {
   const transporter =
-    nodemailer.createTransport({
-      service: config.emailService,
-      auth: {
-        user: config.emailUser,
-        pass: config.emailAppKey
-      }
-    })
+    nodemailer.createTransport(config.emailAuth)
 
   const sendMailAdHoc = (messageParameters, message) => {
     return sendMailWithoutTemplate(transporter, messageParameters, message, config)
