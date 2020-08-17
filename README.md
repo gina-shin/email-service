@@ -37,6 +37,8 @@ emailService.runEmailApi({
 
 ### Step Two: Set up a folder to store the templates.
 
+For this example, let's set up a "congrats" template. To congratulate our recipient for a recent purchase.
+
 ```sh
 .
 ├── index.js
@@ -45,6 +47,11 @@ emailService.runEmailApi({
         ├── html.pug
 ```
 
+html.pug
+```
+p Congratulations! Enjoy the purchase of your new:
+p #{itemId}
+```
 
 ### Step Three: Send your HTTP request!
 
@@ -62,9 +69,14 @@ Below is an example documented via Postman.
 ![Template Email Request Params](docs/postman_template_email_params.jpeg
 )
 
-* Finally, your POST body should look something like this:
+* Then, your POST body should look something like this:
 
 ![Template Email Request POST body](docs/postman_template_email_post_body.png
+)
+
+* And finally, your recipient can enjoy their new email.
+
+![Final Resulting Templated Email](docs/result_template_email.png
 )
 
 **For an ad-hoc/on the fly email made without a template:**
@@ -79,6 +91,10 @@ Below is an example documented via Postman.
 ![Ad-Hoc Email Request POST body](docs/postman_adhoc_email_post_body.png
 )
 
+* And then in your inbox is a shiny new email.
+
+![Final Resulting Ad-Hoc Email](docs/result_adhoc_email.png
+)
 
 
 
