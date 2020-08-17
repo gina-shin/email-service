@@ -12,7 +12,7 @@ Great for sending password reset emails to users, account validation emails, or 
 
 ## Here's an example!
 
-First, start the server like so:
+### First, start the server like so:
 
 ```js
 // index.js
@@ -35,7 +35,7 @@ emailService.runEmailApi({
   })
 ```
 
-Step Two: Set up a folder to store the templates.
+### Step Two: Set up a folder to store the templates.
 
 ```sh
 .
@@ -46,9 +46,38 @@ Step Two: Set up a folder to store the templates.
 ```
 
 
-Step Three: Send your HTTP request!
+### Step Three: Send your HTTP request!
 
 Below is an example documented via Postman.
+
+**For a templated email:**
+
+* The request header should have your authorization secret key.
+
+![Template Email Request Header](docs/postman_template_email_headers.png
+)
+
+* Set the template folder name that the service should use.
+
+![Template Email Request Params](docs/postman_template_email_params.jpeg
+)
+
+* Finally, your POST body should look something like this:
+
+![Template Email Request POST body](docs/postman_template_email_post_body.png
+)
+
+**For an ad-hoc/on the fly email made without a template:**
+
+* The request header should have your authorization secret key.
+
+![Ad-Hoc Email Request Header](docs/postman_adhoc_email_headers.png
+)
+
+* The only thing left to do is to set your POST body like so:
+
+![Ad-Hoc Email Request POST body](docs/postman_adhoc_email_post_body.png
+)
 
 
 
