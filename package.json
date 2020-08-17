@@ -1,6 +1,6 @@
 {
   "name": "rest-email-api",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "A REST API that sends both ad-hoc and templated emails.",
   "main": "index.js",
   "scripts": {
