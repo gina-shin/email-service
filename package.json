@@ -1,13 +1,13 @@
 {
-  "name": "email-service",
-  "version": "1.0.0",
-  "description": "",
+  "name": "rest-email-api",
+  "version": "1.0.6",
+  "description": "A REST API that sends both ad-hoc and templated emails.",
   "main": "index.js",
   "scripts": {
     "test": "npm run test"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "dotenv": "^8.2.0",
     "email-templates": "^7.1.0",

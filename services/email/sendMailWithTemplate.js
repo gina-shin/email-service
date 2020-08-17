@@ -2,7 +2,7 @@ const Email = require('email-templates')
 const path = require('path')
 
 const sendMailWithTemplate = (transporter, messageParameters, message, config) => {
-  const templatePath = path.join(__dirname, `../templates/${messageParameters.template}`)
+  const templatePath = path.resolve(config.templateDirectory, messageParameters.template)
 
   const email = new Email({
     message: {
