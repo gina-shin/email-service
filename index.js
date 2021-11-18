@@ -1,21 +1,19 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const registerRoutes = require('./routes/emailRoutes');
+const { authorize } = require('./middlewares/authorization');
+
 function runEmailApi(config) {
+  const app = express();
 
-  const express = require('express')
-  const app = express()
-  const bodyParser = require('body-parser')
+  app.use(bodyParser.json());
+  app.use(authorize(config.secretKey));
+  app.use('/', registerRoutes.emailRoutes(express.Router(), config));
 
-  // const { config } = require('./config')
-  const registerRoutes = require('./routes/emailRoutes')
-  const { authorize } = require('./middlewares/authorization')
-
-  app.use(bodyParser.json())
-  app.use(authorize(config.secretKey))
-  app.use('/', registerRoutes.emailRoutes(express.Router(), config))
-
-  app.listen(config.port, () => console.log(`Email service listening at http://localhost:${config.port}`))
-
+  // eslint-disable-next-line no-console
+  app.listen(config.port, () => console.log(`Email service listening at http://localhost:${config.port}`));
 }
 
 module.exports = {
   runEmailApi,
-}
+};
