@@ -1,4 +1,5 @@
 const emailRoutes = (router, config) => {
+  // eslint-disable-next-line global-require
   const services = require('../services/email/index')(config);
 
   router.post('/ad-hoc-email/send', (req, res) => {
@@ -23,7 +24,7 @@ const emailRoutes = (router, config) => {
             error,
           });
         // eslint-disable-next-line no-console
-        console.log('error: ', error);
+        console.error('error: ', error);
       })
       .then((response) => {
         res
@@ -59,7 +60,7 @@ const emailRoutes = (router, config) => {
             error,
           });
         // eslint-disable-next-line no-console
-        console.log('error: ', error);
+        console.error('error: ', error);
       })
       .then((response) => {
         res
