@@ -1,11 +1,10 @@
-/* eslint-disable global-require */
-function runEmailApi(config) {
-  const express = require('express');
-  const app = express();
-  const bodyParser = require('body-parser');
+const express = require('express');
+const bodyParser = require('body-parser');
+const registerRoutes = require('./routes/emailRoutes');
+const { authorize } = require('./middlewares/authorization');
 
-  const registerRoutes = require('./routes/emailRoutes');
-  const { authorize } = require('./middlewares/authorization');
+function runEmailApi(config) {
+  const app = express();
 
   app.use(bodyParser.json());
   app.use(authorize(config.secretKey));
