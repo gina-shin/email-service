@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 function runEmailApi(config) {
   const express = require('express');
   const app = express();
